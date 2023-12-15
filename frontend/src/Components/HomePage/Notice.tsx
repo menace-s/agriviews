@@ -4,7 +4,7 @@ interface NoticeProps {
     product: string;
   }
   
-  const Notice: React.FC<NoticeProps> = ({ product }) => {
+  const Notice: React.FC<NoticeProps> = ({ product}) => {
     return (
       <div className='notice'>
         {product}

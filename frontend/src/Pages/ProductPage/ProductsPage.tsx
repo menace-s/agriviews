@@ -1,10 +1,17 @@
+import AllProducts from "../../Components/HomePage/AllProducts"
+import ChoiceCategories from "../../Components/HomePage/ChoiceCategories"
+import NavBar from "../../Components/HomePage/NavBar"
+import ProductsWelcome from "../../Components/HomePage/ProductsWelcome"
 
 
 const ProductsPage = () => {
   return (
-    <div>
-        <h1>Products</h1>
-    </div>
+    <>
+        <NavBar/>
+        <ProductsWelcome/>
+        <ChoiceCategories/>
+        <AllProducts/>
+    </>
   )
 }
 
