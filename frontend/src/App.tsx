@@ -6,7 +6,6 @@ import HomePage from './Pages/HomePage/HomePage'
 import ProductsPage from './Pages/ProductPage/ProductsPage'
 import Dashbord from './Pages/Dashboard/Dashbord'
 import ProductPage from './Components/HomePage/ProductPage'
-import CategoryPage from './Components/HomePage/CategoryPage'
 import ContactPage from './Pages/ContactPage/ContactPage'
 import AgriviewPage from './Pages/AgriviewPage/AgriviewPage'
 
@@ -22,7 +21,6 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/product/:id" element={<ProductPage />} />
-        <Route path="/category/:id" element={<CategoryPage/>} />
         <Route path="/dashbord" element={<Dashbord />} />
         <Route path='*' element={<ErrorPage />} />
       </Routes>

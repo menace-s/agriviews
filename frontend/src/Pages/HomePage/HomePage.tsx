@@ -24,7 +24,7 @@ const HomePage = () => {
         cropTitle="Persil"
         buttonProps={{
           buttonText: 'Découvrir',
-          buttonLink: '/discover',
+          buttonLink: '/products',
         }}
       />
 

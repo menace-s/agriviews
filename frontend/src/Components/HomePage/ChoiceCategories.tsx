@@ -1,5 +1,5 @@
-// ChoiceCategories.tsx
-import { Link } from "react-router-dom";
+// Dans ChoiceCategories.tsx
+import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "../../styles/Components/NavBar/ChoiceCategories/style.css";
 
@@ -7,9 +7,11 @@ const ChoiceCategories: React.FC = () => {
   const categories = ["Céréales et Grains", "Légumes", "Fruits", "Légumineuses", "Produits dérivés", "Herbes et Épices", "Autres"];
   const [activeLink, setActiveLink] = useState<number>(0);
   const [isMobile, setIsMobile] = useState<boolean>(false);
+  const navigate = useNavigate();
 
   const handleLinkClick = (index: number) => {
     setActiveLink(index);
+    navigate(`/category/${encodeURIComponent(categories[index])}`);
   };
 
   useEffect(() => {

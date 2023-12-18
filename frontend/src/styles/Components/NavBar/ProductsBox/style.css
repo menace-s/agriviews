@@ -64,9 +64,10 @@
 .body__card{
     height: 160px;
     width: 100%;
-    background: url("https://media.istockphoto.com/id/927802702/photo/white-long-grain-rice-in-wooden-bowl-isolated-on-white-background.jpg?s=2048x2048&w=is&k=20&c=41LKAhPlEvoXSS2skvVFIlhIluVJVjRyEaO30c193vI=");
+    background: url("../../../../assets/images/home/noimage.jpg");
     background-position: center center;
     background-size: cover;
+    overflow: hidden;
 }
 
 .allproducts{
@@ -75,4 +76,12 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: .8rem;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+justify-content: center;
+column-gap: 1rem;
+align-items: center;
 }

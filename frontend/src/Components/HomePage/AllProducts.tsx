@@ -1,40 +1,26 @@
-import React, { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
-import ProductsBox from "./ProductsBox";
-import "../../styles/Components/NavBar/ProductsBox/style.css";
-
-interface Product {
-  id: string;
-  price: number;
-  unit: string;
-  description: string;
-}
-
-const generateId = () => uuidv4();
+import React, { useState } from 'react';
+import Data, { Product } from "./Data.tsx";
+import Card from './Card';
+import Buttons from './Buttons';
 
 const AllProducts: React.FC = () => {
-  const [products, setProducts] = useState<Product[]>([
-    { id: generateId(), price: 300, unit: "(kg)", description: "Lorem ipsum dolor sit." },
-    { id: generateId(), price: 100, unit: "(kg)", description: "Lorem ipsum dolor sit." },
-    { id: generateId(), price: 100, unit: "(kg)", description: "Lorem ipsum dolor sit." },
-    { id: generateId(), price: 100, unit: "(kg)", description: "Lorem ipsum dolor sit." },
-    { id: generateId(), price: 100, unit: "(kg)", description: "Lorem ipsum dolor sit." },
-    { id: generateId(), price: 100, unit: "(kg)", description: "Lorem ipsum dolor sit." },
-    { id: generateId(), price: 100, unit: "(kg)", description: "Lorem ipsum dolor sit." },
-    { id: generateId(), price: 100, unit: "(kg)", description: "Lorem ipsum dolor sit." },
-  ]);
+  const [item, setItem] = useState<Product[]>(Data);
+  const menuItems = [...new Set(Data.map((val) => val.domaine))];
+  
+  const filterItems = (categ: string) => {
+    const newItems = Data.filter((newval) => newval.domaine === categ);
+    setItem(newItems);
+  };
 
   return (
-    <div className="allproducts">
-      {products.map((product) => (
-        <ProductsBox
-          key={product.id}
-          id={product.id}
-          price={product.price}
-          unit={product.unit}
-          description={product.description}
-        />
-      ))}
+    <div>
+      <Buttons
+        menuItems={menuItems}
+        filterItems={filterItems}
+        setItem={setItem}
+      />
+      
+      <Card item={item} />
     </div>
   );
 };

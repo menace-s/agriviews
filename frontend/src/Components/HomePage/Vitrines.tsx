@@ -20,7 +20,7 @@ const Vitrines = () => {
                 animate="visible"
                 transition={{ delay: 0.2, type: 'spring', stiffness: 80 }}
             >
-                <Notice product="Tomates" />
+                <Notice product="Légumes" />
             </motion.div>
 
             <motion.div
@@ -30,7 +30,7 @@ const Vitrines = () => {
                 animate="visible"
                 transition={{ delay: 0.4, type: 'spring', stiffness: 80 }}
             >
-                <Notice product="Orange" />
+                <Notice product="Fruits" />
             </motion.div>
 
             <motion.div
@@ -40,7 +40,7 @@ const Vitrines = () => {
                 animate="visible"
                 transition={{ delay: 0.6, type: 'spring', stiffness: 80 }}
             >
-                <Notice product="Mangue" />
+                <Notice product="Légumineuses" />
             </motion.div>
 
             <motion.div
@@ -50,7 +50,7 @@ const Vitrines = () => {
                 animate="visible"
                 transition={{ delay: 0.8, type: 'spring', stiffness: 80 }}
             >
-                <Notice product="Citron" />
+                <Notice product="Céréales" />
             </motion.div>
 
             <motion.div
@@ -60,7 +60,7 @@ const Vitrines = () => {
                 animate="visible"
                 transition={{ delay: 1.0, type: 'spring', stiffness: 80 }}
             >
-                <Notice product="Oignon" />
+                <Notice product="Epices" />
             </motion.div>
 
             <motion.div
@@ -70,13 +70,13 @@ const Vitrines = () => {
                 animate="visible"
                 transition={{ delay: 1.2, type: 'spring', stiffness: 80 }}
             >
-                <Notice product="Ananas" />
+                <Notice product="Grains" />
             </motion.div>
             <motion.div className="links__more__box" variants={itemVariants}
                 initial="hidden"
                 animate="visible"
                 transition={{ delay: 1.4, type: 'spring', stiffness: 80 }}>
-                <Link to="" className='links__more'>Voir Plus <VscTriangleRight color="black" /></Link>
+                <Link to="/products" className='links__more'>Voir Plus <VscTriangleRight color="black" /></Link>
             </motion.div>
         </motion.div>
     )

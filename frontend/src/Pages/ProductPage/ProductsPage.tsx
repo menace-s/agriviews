@@ -1,5 +1,5 @@
 import AllProducts from "../../Components/HomePage/AllProducts"
-import ChoiceCategories from "../../Components/HomePage/ChoiceCategories"
+import Footer from "../../Components/HomePage/Footer"
 import NavBar from "../../Components/HomePage/NavBar"
 import ProductsWelcome from "../../Components/HomePage/ProductsWelcome"
 
@@ -9,8 +9,8 @@ const ProductsPage = () => {
     <>
         <NavBar/>
         <ProductsWelcome/>
-        <ChoiceCategories/>
         <AllProducts/>
+        <Footer/>
     </>
   )
 }

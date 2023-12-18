@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import '../../styles/Components/NavBar/style.css';
-import { IoSearchOutline } from "react-icons/io5";
-import { FaRegHeart } from "react-icons/fa";
 import { BsBasket } from "react-icons/bs";
 import { IoMenu } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
@@ -48,8 +46,6 @@ const NavBar: React.FC = () => {
                     </ul>
                     <div className="box-full">
                         <div className="icons">
-                            <Link to=""><IoSearchOutline /></Link>
-                            <Link to=""><FaRegHeart /></Link>
                             <div className="info">
                                 <h4 className="info-bule">00</h4>
                                 <BsBasket />

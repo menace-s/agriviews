@@ -21,7 +21,7 @@ const ContactPage = () => {
         cropTitle="Aide"
         buttonProps={{
           buttonText: 'Contactez-nous',
-          buttonLink: '/discover',
+          buttonLink: '/contact',
         }}
       />
       <ContactSection/>
