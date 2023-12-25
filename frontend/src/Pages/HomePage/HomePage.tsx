@@ -8,7 +8,9 @@ import Footer from "../../Components/HomePage/Footer";
 import image from "../../assets/images/home/home.jpg"
 
 
+
 const HomePage = () => {
+
   return (
     <div className="home-container">
       <NavBar />

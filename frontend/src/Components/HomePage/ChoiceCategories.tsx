@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "../../styles/Components/NavBar/ChoiceCategories/style.css";
 
+
 const ChoiceCategories: React.FC = () => {
   const categories = ["Céréales et Grains", "Légumes", "Fruits", "Légumineuses", "Produits dérivés", "Herbes et Épices", "Autres"];
   const [activeLink, setActiveLink] = useState<number>(0);
@@ -35,8 +36,12 @@ const ChoiceCategories: React.FC = () => {
             key={index}
             to={`/category/${encodeURIComponent(category)}`}
             className={`choice ${activeLink === index ? "active" : ""}`}
-            onClick={() => handleLinkClick(index)}
+            onClick={() => {
+              handleLinkClick(index);
+              
+            }}
           >
+            
             {category}
           </Link>
         )
